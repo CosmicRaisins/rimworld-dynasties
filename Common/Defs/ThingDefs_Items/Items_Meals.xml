@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="MealCooked">
+		<defName>SZ_OrangeChickenMeal</defName>
+		<label>orange chicken meal</label>
+		<description>An paradoxical ancient chinese cuisine that isn't created by the Chinese people. Quick to cook, taste surprisingly decent.</description>
+		<graphicData>
+			<texPath>Things/Meals/SZ_OrangeChicken</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>12</MarketValue>
+			<WorkToMake>450</WorkToMake>
+			<Nutrition>0.8</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<tasteThought>AteOrangeChicken</tasteThought>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+
+	</ThingDef>
+
+	<ThingDef ParentName="MealCooked">
+		<defName>SZ_BeijingDuck</defName>
+		<label>Beijing Duck</label>
+		<description>Methodically roasted duck rolled in extra thin tortilla-like wraps with cucmber and leek strips and sweet noodle sauce. Traditional Beijing cuisine.</description>
+		<graphicData>
+			<texPath>Things/Meals/SZ_BeijingDuck</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>50</MarketValue>
+			<WorkToMake>1500</WorkToMake>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealLavish</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<tasteThought>AteBeijingDuck</tasteThought>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+
+	</ThingDef>
+
+
+</Defs>

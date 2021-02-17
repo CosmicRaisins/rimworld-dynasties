@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>Shenzhou</defName>
+    <label>mysterious empire</label>
+    <categoryTag>Shenzhou</categoryTag>
+    <description>A mysterious society of unkown origin. An ultratech refugee society from another planet,
+      organized along feudal lines.\n\nThey lived for thousands of years
+      in a stable multi-planet empire with a strict caste system,
+      an intricate code of warrior ethics, and enforced cultural stasis.
+      Invaded by powerful outsiders, they fled.
+      Despite losing almost all of their people, their fleet and technology
+       still make them powerful.\n\nThey will refuse to trade with anyone who
+       lacks the appropriate royal title.</description>
+    <pawnSingular>imperial</pawnSingular>
+    <pawnsPlural>imperials</pawnsPlural>
+    <listOrderPriority>95</listOrderPriority>
+    <settlementGenerationWeight>0.8</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Cheiftain</leaderTitle>
+    <royalFavorLabel>effort</royalFavorLabel>
+    <royalFavorIconPath>UI/Icons/RoyalFavor</royalFavorIconPath>
+    <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <factionNameMaker>NamerFactionShenzhou</factionNameMaker>
+        <!-- TODO -->
+    <settlementNameMaker>NamerSettlementShenzhou</settlementNameMaker>
+        <!-- TODO -->
+    <pawnNameMaker>NamerPersonShenzhou</pawnNameMaker>
+        <!-- TODO -->
+    <pawnNameMakerFemale>NamerPersonShenzhouFemale</pawnNameMakerFemale>
+        <!-- TODO -->
+    <factionIconPath>World/Base/ShenzhouBase</factionIconPath>
+    <permanentEnemyToEveryoneExcept>
+      <li>OutlanderCivil</li>
+      <li>TribeCivil</li>
+      <li>PlayerTribe</li>
+      <li>PlayerColony</li>
+      <li>Ancients</li>
+    </permanentEnemyToEveryoneExcept>
+    <techLevel>Ultra</techLevel>
+        <!-- TODO -->
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>ShenzhouCommon</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>1</geneticVariance>
+        <!-- TODO -->
+    <apparelStuffFilter>
+      <stuffCategoriesToAllow>
+        <li>Metallic</li>
+        <li>Fabric</li>
+      </stuffCategoriesToAllow>
+      <disallowedThingDefs>
+        <li>DevilstrandCloth</li>
+        <li>Hyperweave</li>
+      </disallowedThingDefs>
+    </apparelStuffFilter>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+    </hairTags>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <!-- TODO -->
+    <settlementTexturePath>World/Base/ShenzhouBase</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.85, 0.85, 0.75)</li>
+    </colorSpectrum>
+    <!-- TODO -->
+    <fixedLeaderKinds>
+      <li>Shenzhou_Emperor</li>
+    </fixedLeaderKinds>
+    <!-- TODO -->
+    <royalTitleTags>
+      <li>ShenzhouTitle</li>
+    </royalTitleTags>
+    <!-- TODO -->
+    <baseTraderKinds>
+      <li>Base_Shenzhou_Standard</li>
+    </baseTraderKinds>
+    <caravanTraderKinds>
+      <li>Shenzhou_Caravan_TraderGeneral</li>
+    </caravanTraderKinds>
+    <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+    <royalTitleInheritanceRelations>
+      <li>Child</li>
+      <li>Grandchild</li>
+      <li>GreatGrandchild</li>
+      <li>NephewOrNiece</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+      <li>HalfSibling</li>
+      <li>Cousin</li>
+      <li>Parent</li>
+      <li>UncleOrAunt</li>
+    </royalTitleInheritanceRelations>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <raidLootMaker>EmpireRaidLootMaker</raidLootMaker>
+    <!-- TODO -->
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(500, 100)</li> <!-- Can always use relatively strong pawns, because empire doesn't really have weak ones -->
+        <li>(1000, 150)</li>
+        <li>(2000, 250)</li>
+        <li>(2001, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <!-- Traders - TODO -->
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Empire_Common_Trader>1</Empire_Common_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Empire_Fighter_Trooper>10</Empire_Fighter_Trooper>
+          <Empire_Fighter_Cataphract>1.5</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Janissary>7</Empire_Fighter_Janissary>
+          <Empire_Fighter_Champion>10</Empire_Fighter_Champion>
+        </guards>
+      </li>
+      <li>
+        <!-- Normal fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+          <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+          <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Champion>4</Empire_Fighter_Champion>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Empire_Fighter_Trooper>5</Empire_Fighter_Trooper>
+          <Empire_Fighter_Janissary>3.5</Empire_Fighter_Janissary>
+          <Empire_Fighter_Cataphract>2</Empire_Fighter_Cataphract>
+          <Empire_Fighter_Champion>4</Empire_Fighter_Champion>
+      </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <ThingSetMakerDef>
+    <defName>EmpireRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+            <li>MedicineUltratech</li>
+            <li>Uranium</li>
+            <li>MealSurvivalPack</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+
+  <!-- =============================== Names =============================== -->
+
+  <RulePackDef>
+    <defName>NamerFactionShenzhou</defName>
+    <include>
+      <li>ShenzhouNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->[kingdom] of [ofThing]</li>
+        <li>r_name(p=2)->The [kingdom] of [ofThing]</li>
+        <li>r_name->The Middle [kingdom]</li>
+        <li>r_name->The Glorious [kingdom]</li>
+        <li>r_name->The Ancient [kingdom]</li>
+        <li>r_name->The People's [kingdom]</li>
+        <li>r_name->The Xuanyuan [kingdom]</li>
+        <li>r_name->The Pragmatic [kingdom]</li>
+
+        <li>kingdom(p=3)->Kingdom</li>
+        <li>kingdom(p=3)->Dynasty</li>
+        <li>kingdom->Commonwealth</li>
+        <li>kingdom->Imperium</li>
+        <li>kingdom->Realm</li>
+
+        <li>ofThing->the Sun</li>
+        <li>ofThing->the Moon</li>
+        <li>ofThing->Xuanyuan</li>
+        <li>ofThing->Shenzhou</li>
+        <li>ofThing->Eternity</li>
+        <li>ofThing->the Ancients</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerSettlementShenzhou</defName>
+    <include>
+      <li>ShenzhouNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->[sz_generated_townnames]</li>
+        <li>r_name->[sz_real_townnames]</li>
+
+        <li>sz_real_townnames(p=2)->New [sz_chinesecities]</li>
+        <li>sz_real_townnames->Little [sz_chinesecities]</li>
+
+        <li>sz_generated_townnames(p=2)->[sz_prefix] [sz_townnames]</li>
+        <li>sz_generated_townnames->[sz_townnames] [sz_suffix]</li>
+
+        <li>sz_prefix(p=2)->New</li>
+        <li>sz_prefix(p=2)->Old</li>
+        <li>sz_prefix(p=2)->Great</li>
+        <li>sz_prefix(p=2)->Glorious</li>
+        <li>sz_prefix(p=2)->Little</li>
+        <li>sz_prefix(p=2)->Silver</li>
+        <li>sz_prefix(p=2)->Golden</li>
+        <li>sz_prefix(p=2)->Red</li>
+        <li>sz_prefix->Eightfold</li>
+        <li>sz_prefix(p=2)->Home of</li>
+        <li>sz_prefix(p=2)->Town of</li>
+        <li>sz_prefix(p=2)->City of</li>
+        <li>sz_prefix->Village of</li>
+        <li>sz_prefix->Home by the</li>
+        <li>sz_prefix->Town by the</li>
+        <li>sz_prefix->City by the</li>
+        <li>sz_prefix->Village by the</li>
+
+        <li>sz_chinesecities->Beijing</li>
+        <li>sz_chinesecities->Shanghai</li>
+        <li>sz_chinesecities->Guangzhou</li>
+        <li>sz_chinesecities->Shenzhen</li>
+        <li>sz_chinesecities->Hong Kong</li>
+        <li>sz_chinesecities->Taipei</li>
+        <li>sz_chinesecities->Tianjin</li>
+        <li>sz_chinesecities->Chongqing</li>
+        <li>sz_chinesecities->Wuhan</li>
+        <li>sz_chinesecities->Datong</li>
+        <li>sz_chinesecities->Sanya</li>
+        <li>sz_chinesecities->Suzhou</li>
+        <li>sz_chinesecities->Qingdao</li>
+
+        <li>sz_suffix(p=2)->City</li>
+        <li>sz_suffix(p=2)->Town</li>
+        <li>sz_suffix(p=2)->Village</li>
+        <li>sz_suffix(p=2)->County</li>
+        <li>sz_suffix->Street</li>
+        <li>sz_suffix->by the River</li>
+        <li>sz_suffix->by the Lake</li>
+        <li>sz_suffix->by the River</li>
+        <li>sz_suffix->by the Mountains</li>
+        <li>sz_suffix->of the Dragons</li>
+        <li>sz_suffix->of the Sun</li>
+        <li>sz_suffix->of the Moon</li>
+
+        <li>sz_townnames->Bamboo</li>
+        <li>sz_townnames->Oolong</li>
+        <li>sz_townnames->Rice</li>
+        <li>sz_townnames->Tiger</li>
+        <li>sz_townnames->Dragon</li>
+        <li>sz_townnames->Tofu</li>
+        <li>sz_townnames->Lychee</li>
+        <li>sz_townnames->Spirit</li>
+
+        <li>sz_townnames->Wuxia</li>
+        <li>sz_townnames->Spring</li>
+        <li>sz_townnames->Winter</li>
+        <li>sz_townnames->Sol</li>
+        <li>sz_townnames->Luna</li>
+        <li>sz_townnames->Shadow</li>
+        <li>sz_townnames->Typhoon</li>
+        <li>sz_townnames->River</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonEmpire</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=3)->[ImperialNameFirstMale] [ImperialNameLast]</li>
+        <li>r_name(p=2)->[ImperialNameFirstMale] [WordImperial]</li>
+        <li>r_name(p=2)->[WordImperial] [WordImperial]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerPersonEmpireFemale</defName>
+    <include>
+      <li>EmpireNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=3)->[ImperialNameFirstFemale] [ImperialNameLast]</li>
+        <li>r_name(p=2)->[ImperialNameFirstFemale] [WordImperial]</li>
+        <li>r_name(p=2)->[WordImperial] [WordImperial]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

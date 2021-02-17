@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>SZ_SeenBaihu</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>seen a Baihu</label>
+        <description>What a majestic creature!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

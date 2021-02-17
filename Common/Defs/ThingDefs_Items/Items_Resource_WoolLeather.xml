@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ======================= Tiger leather =============================== -->
+
+	<ThingDef ParentName="LeatherBase">
+		<defName>SZ_Leather_Baihu</defName>
+		<label>baihu leather</label>
+		<description>Baihu leather is hard to come by in the rim. It is breathtakingly beautiful and unbeliveably soft and fluffy. Making clothes out of Baihu leather is frowned upon in some societies for its place as a deity in ancient folklores, but this is not a concern in the rim.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SZ_BaihuLeather</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>15</MarketValue>
+			<StuffPower_Armor_Sharp>1</StuffPower_Armor_Sharp>
+			<StuffPower_Insulation_Heat>36</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(200,205,212)</color>
+			<commonality>0.002</commonality>
+			<statFactors>
+				<MaxHitPoints>3.0</MaxHitPoints>
+				<Beauty>10</Beauty>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+
+</Defs>
